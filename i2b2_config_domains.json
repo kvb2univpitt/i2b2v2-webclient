@@ -28,6 +28,18 @@
       }
     }, {
       "domain": "i2b2demo",
+      "name": "Globus (localhost)",
+      "urlCellPM": "http://127.0.0.1/i2b2/services/PMService/",
+      "allowAnalysis": true,
+      "debug": false,
+      "saml": {
+          "globus": {
+              "redirect": "globus-redirect.php",
+              "logout": "globus-logout.php"
+          }
+      }
+    }, {
+      "domain": "i2b2demo",
       "name": "Test multiple SAML2 logins",
       "urlCellPM": "http://127.0.0.1/i2b2/services/PMService/",
       "allowAnalysis": true,

@@ -229,6 +229,17 @@ if ($PostBody=="") {
             array_push($headers, $header);
         }
     }
+
+	// determine what to put in the header for a specific SSO
+    if (isset($_SESSION["globus_shib-session-id"])) {
+        $header = "X-Shib-Session-ID: " . $_SESSION["globus_shib-session-id"];
+        array_push($headers, $header);
+    }
+    if (isset($_SESSION["globus_eppn"])) {
+        $header = "X-eduPersonPrincipalName: " . $_SESSION["globus_eppn"];
+        array_push($headers, $header);
+    }
+
     curl_setopt($proxyRequest, CURLOPT_HTTPHEADER, $headers);
     // SEND THE REQUEST
 	$proxyResult = curl_exec($proxyRequest);
