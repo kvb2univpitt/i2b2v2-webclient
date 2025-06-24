@@ -1,6 +1,6 @@
 <?php
 
-$application_name = 'Pitt i2b2';
+$application_name = 'i2b2 Web Client';
 
 $globus_client_id = '';
 $globus_client_secret = '';
